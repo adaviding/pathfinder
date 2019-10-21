@@ -19,13 +19,13 @@ Then, at the top of your script, you would put the following code.
 
 ```python
 import os
-import pathfinder
+import lib_attacher
 
 # Get the folder containing your script file.
 this_folder=os.path.dirname(os.path.realpath(__file__))
 
 # Attach to the parent folder of your library
-attached = pathfinder.attach_folder_in_hierarchy(
+attached = lib_attacher.attach_folder_in_hierarchy(
     start_folder=this_folder,
     target_sub_path="scripts_folder/python_libs")
 
@@ -66,7 +66,7 @@ If, by some chance, there are multiple `scripts_folder/python_libs` folders, you
 
 ```python
 # Attach to the parent folder of your library
-attached = pathfinder.attach_folder_in_hierarchy(
+attached = lib_attacher.attach_folder_in_hierarchy(
     start_folder=this_folder,
     target_sub_path="scripts_folder/python_libs",
     extra_sub_path="my_python_lib/__init__.py")
